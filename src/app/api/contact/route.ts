@@ -16,36 +16,18 @@ export async function POST(request: Request) {
       throw new Error('Email configuration is missing');
     }
 
-    // Create Rocketmail SMTP transporter
+    // Create Rocketmail SMTP transporter with updated settings
     const transporter = nodemailer.createTransport({
-      host: 'smtp.mail.yahoo.com',
-      port: 465,
-      secure: true,
+      service: 'Yahoo',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
-      },
-      debug: true,
-      tls: {
-        rejectUnauthorized: false // Only for testing, remove in production
       }
     });
 
-    // Verify transporter configuration
-    try {
-      await transporter.verify();
-      console.log('Transporter verification successful');
-    } catch (verifyError) {
-      console.error('Transporter verification failed:', verifyError);
-      throw verifyError;
-    }
-
-    // Email content
+    // Email content with simpler configuration
     const mailOptions = {
-      from: {
-        name: 'Spray Foam Insulation Contact Form',
-        address: process.env.EMAIL_USER
-      },
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: "New Contact Form Submission",
       text: `
@@ -62,42 +44,33 @@ export async function POST(request: Request) {
         <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
         <p><strong>Service:</strong> ${service}</p>
         <p><strong>Message:</strong> ${message}</p>
-      `,
+      `
     };
 
-    console.log('Attempting to send mail with options:', {
-      from: mailOptions.from,
-      to: mailOptions.to,
-      subject: mailOptions.subject
-    });
-
-    // Send email
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Message sent successfully:', {
-      messageId: info.messageId,
-      response: info.response
-    });
-
-    return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 }
-    );
+    try {
+      // Send email
+      const info = await transporter.sendMail(mailOptions);
+      console.log('Message sent successfully:', info.messageId);
+      
+      return NextResponse.json(
+        { message: "Email sent successfully" },
+        { status: 200 }
+      );
+    } catch (sendError: any) {
+      console.error('Failed to send email:', {
+        error: sendError.message,
+        code: sendError.code,
+        response: sendError.response
+      });
+      throw sendError;
+    }
   } catch (error: any) {
-    console.error('Detailed error sending email:', {
-      errorMessage: error.message,
-      errorName: error.name,
-      errorStack: error.stack,
-      errorCode: error.code
-    });
+    console.error('Error in email route:', error);
     
     return NextResponse.json(
       { 
         message: "Failed to send email", 
-        error: error.message,
-        details: {
-          name: error.name,
-          code: error.code
-        }
+        error: error.message
       },
       { status: 500 }
     );
