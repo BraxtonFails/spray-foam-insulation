@@ -16,6 +16,7 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.11.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/node": "^20.17.57",
     "@types/react": "^18.3.23",
