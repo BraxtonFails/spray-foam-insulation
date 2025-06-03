@@ -19,6 +19,12 @@ const nextConfig = {
   experimental: {
     isrMemoryCacheSize: 0, // Disable ISR cache
   },
+
+  // Environment variables
+  env: {
+    EMAIL_USER: 'sprayfoam@rocketmail.com',
+    EMAIL_PASSWORD: 'wirbiglxxfrpfoup'
+  }
 }
 
 module.exports = nextConfig 
