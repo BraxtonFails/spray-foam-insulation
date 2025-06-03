@@ -1,15 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static optimization where possible
-  output: 'export',
-  
   // Image optimization settings
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true
   },
 
   // Enable React strict mode for better performance
-  reactStrictMode: true
+  reactStrictMode: true,
+
+  // Environment Variables
+  env: {
+    EMAIL_USER: process.env.EMAIL_USER,
+    EMAIL_PASSWORD: process.env.EMAIL_PASSWORD
+  }
 }
 
 module.exports = nextConfig 

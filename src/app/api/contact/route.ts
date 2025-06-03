@@ -1,17 +1,27 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Load environment variables
+const EMAIL_USER = process.env.EMAIL_USER || 'sprayfoam@rocketmail.com';
+const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || 'wirbiglxxfrpfoup';
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { name, email, phone, service, message } = body;
 
     console.log('Attempting to send email with data:', { name, email, phone, service });
-    
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+    console.log('Environment variables:', {
+      NODE_ENV: process.env.NODE_ENV,
+      hasEmailUser: !!EMAIL_USER,
+      emailUserValue: EMAIL_USER,
+      hasEmailPassword: !!EMAIL_PASSWORD
+    });
+
+    if (!EMAIL_USER || !EMAIL_PASSWORD) {
       console.error('Missing email configuration:', {
-        hasEmailUser: !!process.env.EMAIL_USER,
-        hasEmailPassword: !!process.env.EMAIL_PASSWORD
+        hasEmailUser: !!EMAIL_USER,
+        hasEmailPassword: !!EMAIL_PASSWORD
       });
       throw new Error('Email configuration is missing');
     }
@@ -22,15 +32,15 @@ export async function POST(request: Request) {
       port: 465,
       secure: true, // use SSL
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+        user: EMAIL_USER,
+        pass: EMAIL_PASSWORD,
       }
     });
 
     // Email content with simpler configuration
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      from: EMAIL_USER,
+      to: EMAIL_USER,
       subject: "New Contact Form Submission",
       text: `
         Name: ${name}
@@ -71,7 +81,7 @@ export async function POST(request: Request) {
     
     return NextResponse.json(
       { 
-        message: "Failed to send email", 
+        message: "Failed to send message. Please try again or contact us directly.", 
         error: error.message
       },
       { status: 500 }
