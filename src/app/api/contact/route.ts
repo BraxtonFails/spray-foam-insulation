@@ -18,7 +18,9 @@ export async function POST(request: Request) {
 
     // Create Rocketmail SMTP transporter with updated settings
     const transporter = nodemailer.createTransport({
-      service: 'Yahoo',
+      host: 'smtp.mail.yahoo.com',
+      port: 465,
+      secure: true, // use SSL
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
