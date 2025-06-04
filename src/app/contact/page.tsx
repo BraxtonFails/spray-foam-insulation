@@ -80,8 +80,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Phone</h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      <a href="tel:+1234567890" className="hover:text-primary-600 dark:hover:text-primary-400">
-                        (123) 456-7890
+                      <a href="tel:+19039750555" className="hover:text-primary-600 dark:hover:text-primary-400">
+                        (903) 975-0555
                       </a>
                     </p>
                   </div>
@@ -98,8 +98,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Email</h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      <a href="mailto:info@example.com" className="hover:text-primary-600 dark:hover:text-primary-400">
-                        info@example.com
+                      <a href="mailto:sprayfoam@rocketmail.com" className="hover:text-primary-600 dark:hover:text-primary-400">
+                        sprayfoam@rocketmail.com
                       </a>
                     </p>
                   </div>
@@ -117,8 +117,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Location</h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      123 Main Street<br />
-                      Winnsboro, TX 75494
+                      Winnsboro, TX
                     </p>
                   </div>
                 </div>
@@ -128,8 +127,7 @@ export default function Contact() {
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Business Hours</h3>
                 <div className="space-y-2 text-gray-600 dark:text-gray-300">
                   <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                  <p>Saturday: 9:00 AM - 2:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Saturday - Sunday: By Appointment</p>
                 </div>
               </div>
             </div>

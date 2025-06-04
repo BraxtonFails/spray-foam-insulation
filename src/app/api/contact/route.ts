@@ -8,9 +8,9 @@ const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || 'wirbiglxxfrpfoup';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, service, message } = body;
+    const { name, email, phone, message, projectType } = body;
 
-    console.log('Attempting to send email with data:', { name, email, phone, service });
+    console.log('Attempting to send email with data:', { name, email, phone, projectType });
     console.log('Environment variables:', {
       NODE_ENV: process.env.NODE_ENV,
       hasEmailUser: !!EMAIL_USER,
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
         Name: ${name}
         Email: ${email}
         Phone: ${phone || 'Not provided'}
-        Service: ${service}
+        Project Type: ${projectType}
         Message: ${message}
       `,
       html: `
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Project Type:</strong> ${projectType}</p>
         <p><strong>Message:</strong> ${message}</p>
       `
     };

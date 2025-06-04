@@ -46,9 +46,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <div className="space-y-2 text-gray-300">
+              <p>Owner: Travis Fails</p>
               <p>Winnsboro, TX</p>
-              <p>Phone: (903) 975-0555</p>
-              <p>Email: sprayfoam@rocketmail.com</p>
+              <p>Phone: <a href="tel:+19039750555" className="hover:text-white">(903) 975-0555</a></p>
+              <p>Email: <a href="mailto:sprayfoam@rocketmail.com" className="hover:text-white">sprayfoam@rocketmail.com</a></p>
               <div className="mt-4 flex space-x-4">
                 <a href="#" className="text-gray-300 hover:text-white">
                   <span className="sr-only">Facebook</span>

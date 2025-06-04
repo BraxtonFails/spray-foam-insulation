@@ -19,7 +19,7 @@ export default function About() {
     },
     {
       name: 'Braxton Fails',
-      role: 'Social Media Manager',
+      role: 'Digital Operations Manager',
       description: '2 years of social media management'
     }
   ];
@@ -43,7 +43,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/Commercial3.jpeg"
+                src="/images/Commercial6.jpeg"
                 alt="Our Team"
                 fill
                 className="object-cover"
@@ -53,7 +53,7 @@ export default function About() {
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-300">
                 <p>
-                  Founded in 2000, Advanced Insulation has grown from a small local business to a trusted name in spray foam insulation
+                  Founded in 2005, Advanced Insulation has grown from a small local business to a trusted name in spray foam insulation
                   across East Texas. Our commitment to quality and customer satisfaction has been the cornerstone of our success.
                 </p>
                 <p>
@@ -121,7 +121,11 @@ export default function About() {
               <div key={index} className="bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200 dark:border-gray-700">
                 <div className="relative h-48 w-48 mx-auto mb-6 rounded-full overflow-hidden">
                   <Image
-                    src={`/images/Commercial${index + 4}.jpeg`}
+                    src={member.name === 'Braxton Fails' 
+                      ? '/images/BraxtonAlone.JPG' 
+                      : member.name === 'Travis Fails'
+                      ? '/images/Travis.JPG'
+                      : '/images/empty-photo.png'}
                     alt={`Team Member ${member.name}`}
                     fill
                     className="object-cover"
@@ -132,6 +136,11 @@ export default function About() {
                 <p className="text-gray-500 dark:text-gray-400">
                   {member.description}
                 </p>
+                {member.name === 'Braxton Fails' && (
+                  <p className="mt-4 text-sm text-primary-600 dark:text-primary-400 font-medium">
+                    Website by BuiltByBrax
+                  </p>
+                )}
               </div>
             ))}
           </div>
