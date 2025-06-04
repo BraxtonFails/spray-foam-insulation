@@ -118,7 +118,7 @@ export default function About() {
           <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200 dark:border-gray-700">
+              <div key={index} className="bg-gray-100 dark:bg-gray-700 rounded-2xl p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200 dark:border-gray-600">
                 <div className="relative h-48 w-48 mx-auto mb-6 rounded-full overflow-hidden">
                   <Image
                     src={member.name === 'Braxton Fails' 

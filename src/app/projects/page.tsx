@@ -71,9 +71,9 @@ export default function Projects() {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Projects</h1>
+        <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Projects</h1>
 
         {/* Category Filter */}
         <div className="flex justify-center mb-12">
@@ -85,12 +85,12 @@ export default function Projects() {
                 className={`
                   px-4 py-2 text-sm font-medium
                   ${category.id === selectedCategory
-                    ? 'bg-primary text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                    ? 'bg-primary-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
                   }
                   ${category.id === categories[0].id ? 'rounded-l-md' : ''}
                   ${category.id === categories[categories.length - 1].id ? 'rounded-r-md' : ''}
-                  border border-gray-300
+                  border border-gray-300 dark:border-gray-600
                 `}
               >
                 {category.name}
@@ -102,7 +102,7 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div key={project.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
               <div className="relative w-full h-64">
                 <Image
                   src={project.image}
@@ -114,10 +114,10 @@ export default function Projects() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="bg-gray-50 p-4 rounded-md">
-                  <p className="text-sm text-gray-600">{project.details}</p>
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+                <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-md">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{project.details}</p>
                 </div>
               </div>
             </div>
@@ -126,13 +126,13 @@ export default function Projects() {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
-          <p className="text-gray-600 mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Ready to Start Your Project?</h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-8">
             Contact us today for a free consultation and estimate for your insulation needs.
           </p>
           <Link
             href="/contact"
-            className="bg-primary text-white hover:bg-green-500 font-bold py-3 px-8 rounded-lg inline-block transition duration-300"
+            className="bg-primary-600 text-white hover:bg-primary-700 font-bold py-3 px-8 rounded-lg inline-block transition duration-300"
           >
             Get Started
           </Link>
