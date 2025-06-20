@@ -5,7 +5,6 @@ import './globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import GoogleTagManager from '../components/GoogleTagManager'
-import { ThemeProvider } from '../context/ThemeProvider'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -14,8 +13,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Advanced Insulation - Winnsboro, TX',
-  description: 'Professional spray foam insulation services in Winnsboro, TX and surrounding areas. Energy-efficient solutions for residential and commercial properties.',
+  title: 'Advanced Insulation - Professional Spray Foam Insulation Services',
+  description: 'Professional spray foam insulation services in Winnsboro, TX and surrounding areas. Residential, commercial, and agricultural insulation solutions.',
 }
 
 export default function RootLayout({
@@ -24,16 +23,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} scroll-smooth`}>
+    <html lang="en" className={`${poppins.variable} font-sans`}>
       <body className={poppins.className}>
-        <ThemeProvider>
-          <GoogleTagManager />
-          <Navbar />
-          <main className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <GoogleTagManager />
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )

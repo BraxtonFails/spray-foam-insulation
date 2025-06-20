@@ -2,85 +2,24 @@
 
 import React from 'react';
 import Link from 'next/link';
-import type { Service } from '../../types';
 import Image from 'next/image';
 
 export default function Services() {
-  const services: Service[] = [
-    {
-      id: 'residential',
-      title: 'Residential Insulation',
-      description: 'Our residential spray foam insulation services provide superior energy efficiency and comfort for your home.',
-      benefits: [
-        'Reduced energy bills',
-        'Improved indoor air quality',
-        'Better temperature control',
-        'Noise reduction',
-        'Moisture control'
-      ],
-      applications: [
-        'Attics',
-        'Walls',
-        'Crawl spaces',
-        'Basements',
-        'New construction'
-      ]
-    },
-    {
-      id: 'commercial',
-      title: 'Commercial Insulation',
-      description: 'Professional insulation solutions for commercial buildings that improve energy efficiency and reduce operating costs.',
-      benefits: [
-        'Lower energy costs',
-        'Improved building efficiency',
-        'Better climate control',
-        'Enhanced structural integrity',
-        'LEED certification support'
-      ],
-      applications: [
-        'Office buildings',
-        'Warehouses',
-        'Retail spaces',
-        'Industrial facilities',
-        'Schools and institutions'
-      ]
-    },
-    {
-      id: 'agricultural',
-      title: 'Agricultural Insulation',
-      description: 'Specialized insulation solutions for agricultural buildings to maintain optimal conditions for livestock and stored products.',
-      benefits: [
-        'Temperature regulation',
-        'Moisture control',
-        'Energy cost reduction',
-        'Better climate control',
-        'Extended building life'
-      ],
-      applications: [
-        'Barns',
-        'Storage facilities',
-        'Livestock buildings',
-        'Equipment storage',
-        'Processing facilities'
-      ]
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gray-100 dark:bg-gray-800">
+      <section className="relative py-20 bg-gray-100">
         <div className="container-custom">
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-8">Our Services</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl">
+          <h1 className="text-5xl font-bold text-gray-900 mb-8">Our Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl">
             We provide comprehensive spray foam insulation solutions for residential, commercial, and agricultural properties.
-            Our expert team ensures professional installation and superior results.
+            Our experienced team ensures quality workmanship and energy-efficient results.
           </p>
         </div>
       </section>
 
       {/* Residential Section */}
-      <section id="residential" className="section bg-white dark:bg-gray-800">
+      <section className="section bg-white" id="residential">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
@@ -92,8 +31,8 @@ export default function Services() {
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Residential Insulation</h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Residential Insulation</h2>
+              <div className="space-y-4 text-gray-600">
                 <p>
                   Our residential spray foam insulation services provide homeowners with superior energy efficiency and comfort.
                   We use high-quality materials and advanced application techniques to ensure optimal results.
@@ -121,12 +60,12 @@ export default function Services() {
       </section>
 
       {/* Commercial Section */}
-      <section id="commercial" className="section bg-gray-100 dark:bg-gray-900">
+      <section className="section bg-gray-100" id="commercial">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Commercial Insulation</h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Commercial Insulation</h2>
+              <div className="space-y-4 text-gray-600">
                 <p>
                   We provide comprehensive insulation solutions for commercial buildings, helping businesses reduce energy costs
                   and maintain comfortable environments for employees and customers.
@@ -163,7 +102,7 @@ export default function Services() {
       </section>
 
       {/* Agricultural Section */}
-      <section id="agricultural" className="section bg-white dark:bg-gray-800">
+      <section className="section bg-white" id="agricultural">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
@@ -175,8 +114,8 @@ export default function Services() {
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Agricultural Insulation</h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Agricultural Insulation</h2>
+              <div className="space-y-4 text-gray-600">
                 <p>
                   Our agricultural insulation services help farmers and ranchers maintain optimal conditions in their facilities
                   while reducing energy costs and improving efficiency.
@@ -205,7 +144,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="section bg-primary-700 dark:bg-primary-800 relative overflow-hidden">
+      <section className="section bg-primary-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
         <div className="container-custom relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -217,7 +156,7 @@ export default function Services() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white dark:bg-gray-100 text-primary-700 dark:text-primary-800 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-gray-50 dark:hover:bg-white hover:scale-[1.02] hover:shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary-700 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-gray-50 hover:scale-[1.02] hover:shadow-lg"
             >
               Contact Us Today
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

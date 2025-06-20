@@ -16,21 +16,16 @@ export default function About() {
       name: 'Harvey Mendez',
       role: 'Senior Technician',
       description: '15+ years of commercial insulation expertise'
-    },
-    {
-      name: 'Braxton Fails',
-      role: 'Digital Operations Manager',
-      description: '2 years of social media management'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gray-100 dark:bg-gray-800">
+      <section className="relative py-20 bg-gray-100">
         <div className="container-custom">
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-8">About Us</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl">
+          <h1 className="text-5xl font-bold text-gray-900 mb-8">About Us</h1>
+          <p className="text-xl text-gray-600 max-w-3xl">
             Advanced Insulation is a leading provider of spray foam insulation services in Winnsboro, TX and surrounding areas.
             With over 20 years of experience, we deliver quality solutions for residential, commercial, and agricultural properties.
           </p>
@@ -38,7 +33,7 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="section bg-white dark:bg-gray-800">
+      <section className="section bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
@@ -50,8 +45,8 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <div className="space-y-4 text-gray-600">
                 <p>
                   Founded in 2005, Advanced Insulation has grown from a small local business to a trusted name in spray foam insulation
                   across East Texas. Our commitment to quality and customer satisfaction has been the cornerstone of our success.
@@ -71,40 +66,40 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="section bg-gray-100 dark:bg-gray-900">
+      <section className="section bg-gray-100">
         <div className="container-custom">
-          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">Our Values</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200 dark:border-gray-700">
-              <div className="h-16 w-16 bg-primary-100 dark:bg-primary-900/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200">
+              <div className="h-16 w-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Quality</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Quality</h3>
+              <p className="text-gray-600">
                 We use only the highest quality materials and follow industry best practices to ensure lasting results.
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200 dark:border-gray-700">
-              <div className="h-16 w-16 bg-primary-100 dark:bg-primary-900/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200">
+              <div className="h-16 w-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Communication</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Communication</h3>
+              <p className="text-gray-600">
                 We maintain clear communication throughout the project to ensure customer satisfaction.
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200 dark:border-gray-700">
-              <div className="h-16 w-16 bg-primary-100 dark:bg-primary-900/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200">
+              <div className="h-16 w-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Efficiency</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Efficiency</h3>
+              <p className="text-gray-600">
                 We work efficiently to minimize disruption while delivering superior results.
               </p>
             </div>
@@ -113,17 +108,15 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="section bg-white dark:bg-gray-800">
+      <section className="section bg-white">
         <div className="container-custom">
-          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-gray-100 dark:bg-gray-700 rounded-2xl p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200 dark:border-gray-600">
+              <div key={index} className="bg-gray-100 rounded-2xl p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-200">
                 <div className="relative h-48 w-48 mx-auto mb-6 rounded-full overflow-hidden">
                   <Image
-                    src={member.name === 'Braxton Fails' 
-                      ? '/images/BraxtonAlone.JPG' 
-                      : member.name === 'Travis Fails'
+                    src={member.name === 'Travis Fails'
                       ? '/images/Travis.JPG'
                       : '/images/empty-photo.png'}
                     alt={`Team Member ${member.name}`}
@@ -131,16 +124,11 @@ export default function About() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">{member.name}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{member.role}</p>
-                <p className="text-gray-500 dark:text-gray-400">
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">{member.name}</h3>
+                <p className="text-gray-600 mb-4">{member.role}</p>
+                <p className="text-gray-500">
                   {member.description}
                 </p>
-                {member.name === 'Braxton Fails' && (
-                  <p className="mt-4 text-sm text-primary-600 dark:text-primary-400 font-medium">
-                    Website by BuiltByBrax
-                  </p>
-                )}
               </div>
             ))}
           </div>
@@ -148,7 +136,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="section bg-primary-700 dark:bg-primary-800 relative overflow-hidden">
+      <section className="section bg-primary-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
         <div className="container-custom relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -160,7 +148,7 @@ export default function About() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white dark:bg-gray-100 text-primary-700 dark:text-primary-800 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-gray-50 dark:hover:bg-white hover:scale-[1.02] hover:shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary-700 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-gray-50 hover:scale-[1.02] hover:shadow-lg"
             >
               Get in Touch
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
